@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #8f0069;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffedd6, #c2c1e6);
+}
+
+/* Navbar Rules */
+#mainNav {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+}
+#mainNav .navbar-brand {
+    color: #fff;
+}
+#mainNav .navbar-nav {
+    margin-top: 1rem;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link {
+    color: #fff;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+    color: #fff;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+    color: #fff;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: #1abc9c;
+}
+#mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.8rem;
+    background: #8f0069 !important;
+}
+#mainNav {
+    background: linear-gradient(to bottom, #ffffff3f, #8f006927);
+}
+#navbarResponsive {
+    height: 100% !important;
+}
+.navbarContent {
+    height: 100%;
+}
+.navbar-nav {
+    height: 100%;
+}
+nav-item {
+    height: 100%;
+}
+a.nav-link:hover {
+    background: #8f0069;
+    text-decoration: none;
+    color: #fff;
+
+}
+.nav-link {
+    transition: background .5s;
+    border-radius: 0px !important;
+}
+.navbar {
+    padding: 0 20px 0 20px !important;
+    min-height: 80px;
+    transition: min-height .5px ease-in-out;
+}
+  
+@media (min-width: 992px) {
+    #mainNav {
+      min-height: 70px !important;
+      transition: min-height 0.5s ease-in-out;
+    }
+    #mainNav .navbar-brand {
+      font-size: 1.75em;
+      transition: font-size 0.3s;
+      min-height: 70px;
+    }
+    #mainNav .navbar-nav {
+      margin-top: 0;
+    }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+      color: #fff;
+      background: #1abc9c;
+    }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+      color: #fff;
+      background: #1abc9c;
+    }
+  
+    #mainNav.navbar-shrink {
+      min-height: 70px;
+    }
+    #mainNav.navbar-shrink .navbar-brand {
+      font-size: 1.5em;
+    }
+    .navbarContent {
+        min-height: 70px;
+    }
+    #navbarResponsive {
+        min-height: 70px;  
+    }
+    .nav-link {
+        min-height: 70px;
+        transition: background-color .5s;
+    }
+}
+@media (max-width: 992px) {
+    li.nav-item {
+        padding: 0px 0px 0px 20px !important;
+        max-width: 200px !important;
+    }
+    a.nav-link{
+        padding: 10px 0px 10px 20px !important;
+    }
+}
+
+/* --   Footer    -- */
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: rgb(241, 241, 241);
+}
+.footerContent {
+    border-width: 5px;
+    padding: 10px 10px 10px 10px;
+    border-color: #8f0069;
+}
+.footer-text {
+    margin: 0 0 0 0;
+    font-size: 08pt;
+}
+
