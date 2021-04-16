@@ -38,7 +38,7 @@
 }
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  font-family: asap, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -56,13 +56,20 @@ body {
     font-weight: 700;
 }
 #mainNav .navbar-brand {
-    color: #fff;
+    color: rgb(54, 54, 54);
+    font-weight: 500;
+    transform:rotatey(20deg);
+    transition: transform .5s;
+}
+#mainNav .navbar-brand:hover {
+    transform:rotatey(-20deg);
+    transition: transform .5s;
 }
 #mainNav .navbar-nav {
     margin-top: 1rem;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link {
-    color: #fff;
+    color: #000;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
     color: #fff;
@@ -79,7 +86,8 @@ body {
     background: #8f0069 !important;
 }
 #mainNav {
-    background: linear-gradient(to bottom, #ffffff3f, #8f006927);
+    background: linear-gradient(to bottom, #ffffff00 , #ffffff);
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
 }
 #navbarResponsive {
     height: 100% !important;
@@ -90,8 +98,10 @@ body {
 .navbar-nav {
     height: 100%;
 }
-nav-item {
+.nav-item {
     height: 100%;
+    position: relative;
+    display: inline-block;
 }
 a.nav-link:hover {
     background: #8f0069;
@@ -100,15 +110,49 @@ a.nav-link:hover {
 
 }
 .nav-link {
-    transition: background .5s;
+    transition: background .5s, color .5s;
     border-radius: 0px !important;
+    font-weight: 400;
 }
 .navbar {
     padding: 0 20px 0 20px !important;
     min-height: 80px;
     transition: min-height .5px ease-in-out;
 }
-  
+.dropbtn {
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    font-size: .9rem;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: color .5s, background-color .5s;
+    font-weight: 400;
+}
+.dropdown-content a:hover {
+    background-color: #8f0069;
+    color: #fff;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ 
 @media (min-width: 992px) {
     #mainNav {
       min-height: 70px !important;
@@ -156,6 +200,52 @@ a.nav-link:hover {
     a.nav-link{
         padding: 10px 0px 10px 20px !important;
     }
+    a.dropbtn {
+        padding: 10px 0px 10px 20px !important;
+        min-width: 180px;
+    }
+}
+
+/* --   Content   -- */
+section.content {
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+div.content-box {
+    margin: 0;
+    width: 90%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: none;
+}
+.content-saldo {
+    height: 55%;
+    margin: 20px 20px;
+    background-color:rgba(0, 0, 0, 0.199);
+    border-radius: 20px;
+}
+.content-contas {
+    height: 45%;
+    margin: 20px 20px;
+    background-color:rgba(0, 0, 0, 0.199);
+    border-radius: 20px;
+}
+.content-acesso-rapido {
+    height: 45%;
+    margin: 20px 20px;
+    background-color:rgba(0, 0, 0, 0.199);
+    border-radius: 20px;
+}
+.content-graficos {
+    height: 55%;
+    margin: 20px 20px;
+    background-color:rgba(0, 0, 0, 0.199);
+    border-radius: 20px;
 }
 
 /* --   Footer    -- */
