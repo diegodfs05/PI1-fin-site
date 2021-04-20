@@ -223,25 +223,55 @@ div.content-box {
     transform: translate(-50%, -50%);
     background-color: none;
 }
+/* -- Box de saldo -- */
 .content-saldo {
+    max-width: 490px;
     height: 55%;
     margin: 20px 20px;
-    background-color:rgba(0, 0, 0, 0.199);
+    background-color: #57024091;
     border-radius: 20px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 900;
 }
+.boas-vindas-txt-box, .saldo-box {
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+}
+.saldo-box {
+    flex-direction: row;
+}
+p.id-moeda, h2.info-saldo {
+    float: left;
+    text-align: center;
+    font-weight: 700;
+}
+/* -- Box de contas -- */
 .content-contas {
+    max-width: 490px;
     height: 45%;
     margin: 20px 20px;
     background-color:rgba(0, 0, 0, 0.199);
     border-radius: 20px;
 }
+/* -- Box de acesso rapido -- */
 .content-acesso-rapido {
+    max-width: 455px;
     height: 45%;
     margin: 20px 20px;
     background-color:rgba(0, 0, 0, 0.199);
     border-radius: 20px;
 }
+.card-acesso-rapido {
+    min-height: 100px;
+    background-color: #fff;
+    color: #000;
+
+}
+/* -- Box de graficos -- */
 .content-graficos {
+    max-width: 455px;
     height: 55%;
     margin: 20px 20px;
     background-color:rgba(0, 0, 0, 0.199);
